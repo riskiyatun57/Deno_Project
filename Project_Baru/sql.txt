@@ -1,0 +1,17 @@
+-- Table: public.tbl_menu
+
+-- DROP TABLE public.tbl_menu;
+
+CREATE TABLE public.tbl_menu
+(
+    kode character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    menu character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT tbl_menu_pkey PRIMARY KEY (kode)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbl_menu
+    OWNER to postgres;
