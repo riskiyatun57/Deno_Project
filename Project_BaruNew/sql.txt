@@ -1,0 +1,135 @@
+-- Table: public.tbl_menu
+
+-- DROP TABLE public.tbl_menu;
+
+CREATE TABLE public.tbl_menu
+(
+    kode character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    menu character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT tbl_menu_pkey PRIMARY KEY (kode)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbl_menu
+    OWNER to postgres;
+
+
+
+-- Table: public.tbl_blogmain
+
+-- DROP TABLE public.tbl_blogmain;
+
+CREATE TABLE public.tbl_blogmain
+(
+    kategori character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    keterangan text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT tbl_blogmain_pkey PRIMARY KEY (kategori)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbl_blogmain
+    OWNER to postgres;
+
+
+
+-- Table: public.tbl_bloginfo
+
+-- DROP TABLE public.tbl_bloginfo;
+
+CREATE TABLE public.tbl_bloginfo
+(
+    id integer NOT NULL,
+    namablog character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    about text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT tbl_bloginfo_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbl_bloginfo
+    OWNER to postgres;
+
+
+
+-- Table: public.tbl_about
+
+-- DROP TABLE public.tbl_about;
+
+CREATE TABLE public.tbl_about
+(
+    judul character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    tentang text COLLATE pg_catalog."default" NOT NULL,
+    reseller text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT tbl_about_pkey PRIMARY KEY (judul)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbl_about
+    OWNER to postgres;
+
+
+
+-- Table: public.tbl_catalogw
+
+-- DROP TABLE public.tbl_catalogw;
+
+CREATE TABLE public.tbl_catalogw
+(
+    ketw text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT tbl_catalogw_pkey PRIMARY KEY (ketw)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbl_catalogw
+    OWNER to postgres;
+
+
+
+-- Table: public.tbl_catalogp
+
+-- DROP TABLE public.tbl_catalogp;
+
+CREATE TABLE public.tbl_catalogp
+(
+    ketp text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT tbl_catalogp_pkey PRIMARY KEY (ketp)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbl_catalogp
+    OWNER to postgres;
+
+
+-- Table: public.tbl_catalogb
+
+-- DROP TABLE public.tbl_catalogb;
+
+CREATE TABLE public.tbl_catalogb
+(
+    ketb text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT tbl_catalogb_pkey PRIMARY KEY (ketb)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbl_catalogb
+    OWNER to postgres;
